@@ -1,0 +1,148 @@
+.about {
+  article {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    padding-top: 67px;
+  }
+
+  article:first-child {
+    max-width: 100%;
+    min-height: 500px;
+    background-color: #C77D70;
+    background-image: url("../../assets/about-background.jpg");
+    background-size: cover;
+    background-position: center;
+    h1, p {
+      text-align: center;
+    }
+    h1 {
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 127px;
+    }
+
+    header {
+      background-color: transparent;
+      h1, a.link {
+        margin-top: 0;
+      }
+    }
+  }
+
+  article:nth-child(2n+0) {
+    background-color: white;
+    min-height: 450px;
+    h2 {
+      margin-top: 40px;
+    }
+    h2, p {
+      width: 400px;
+      padding-left: 400px;
+    }
+  }
+
+  article:nth-child(2n+3) {
+    max-width: 100%;
+    min-height: 450px;
+    background-color: #F2F5F5;
+
+    h2 {
+      margin-top: 40px;
+    }
+    h2, p {
+      width: 400px;
+      padding-right: 400px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    img {
+      position: absolute;
+      top: 40px;
+      left: 440px;
+    }
+  }
+
+  article:last-child {
+    max-width: 100%;
+    background-color: #36414D;
+    min-height: 250px;
+    text-align: center;
+    h2, p {
+      color: white;
+      width: 100%;
+      padding-left:0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  article:nth-child(2) {
+    background-image: url("../../assets/about-timegraph.png");
+    background-position: 0 167px;
+    background-repeat: no-repeat;
+  }
+  article:nth-child(3) {
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 107px;
+      left: 50%;
+      height: 300px;
+      width: 400px;
+      background-image: url("../../assets/about-beforeafter.png");
+      background-position: 40px 0;
+      background-repeat: no-repeat;
+    }
+  }
+  article:nth-child(4) {
+    h2, p {
+      width: 800px;
+      padding-left: 0;
+    }
+  }
+  article:nth-child(5) {
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 107px;
+      left: 50%;
+      height: 300px;
+      width: 400px;
+      background-image: url("../../assets/about-stats.png");
+      background-position: 40px 60px;
+      background-repeat: no-repeat;
+    }
+  }
+  article:nth-child(6) {
+    background-image: url("../../assets/about-gridcells.png");
+    background-position: 0 107px;
+    background-repeat: no-repeat;
+  }
+}
+
+footer.about {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  padding-top: 67px;
+  text-align: center;
+
+  background-color: #F2F5F5;
+
+  img {
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+}

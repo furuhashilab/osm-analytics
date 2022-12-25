@@ -1,0 +1,112 @@
+.rc-dropdown {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 10;
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+}
+.rc-dropdown-hidden {
+  display: none;
+}
+.rc-dropdown-menu {
+  outline: none;
+  position: relative;
+  list-style-type: none;
+  padding: 6px 18px;
+  margin: 8px 0 0 0;
+  text-align: left;
+  border-radius: 4px;
+  background-color: white;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px #BEC9D5;
+
+  & > li {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -4px;
+    left: 6px;
+    right: 21px;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    transform: rotate(45deg);
+    box-shadow: -1px -1px 0 0 #BEC9D5;
+  }
+
+  & > .rc-dropdown-menu-item {
+    position: relative;
+    display: block;
+    padding: 8px 0;
+    clear: both;
+    white-space: nowrap;
+    cursor: pointer;
+
+    input {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+      vertical-align: text-bottom;
+    }
+  }
+
+  & > .rc-dropdown-menu-item:hover,
+  & > .rc-dropdown-menu-item-active,
+  & > .rc-dropdown-menu-item-selected {
+    color: #4B5A6A;
+  }
+
+  & > .rc-dropdown-menu-item-disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:hover {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  & > .rc-dropdown-menu-item {
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  & > .rc-dropdown-menu-item-divider {
+    height: 1px;
+    margin: 1px 17px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    line-height: 0;
+  }
+  &.checkboxes {
+    & > .rc-dropdown-menu-item:before {
+      content: "";
+      background-image: url(../../assets/checkbox-off.svg);
+      height: 14px;
+      width: 14px;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 8px;
+      margin-bottom: -2px;
+    }
+    & > .rc-dropdown-menu-item-selected:before {
+      width: 15px;
+      margin-right: 7px;
+      background-image: url(../../assets/checkbox-on.svg);
+    }
+  }
+}

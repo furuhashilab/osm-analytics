@@ -1,0 +1,153 @@
+div#stats, div#gaps-stats {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &#stats {
+    height: 212px;
+  }
+  &#gaps-stats {
+    height: 74px;
+  }
+
+  background: rgba(#344762, 0.8);
+  background: linear-gradient(to bottom, rgba(#344762,0.8) 0%,rgba(#262323,0.8) 100%);
+
+  ul.metrics {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 12px;
+      line-height: 16px;
+      vertical-align: top;
+    }
+    p {
+      margin: 0;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    a {
+      cursor: pointer;
+    }
+    a:hover {
+      color: #DDDDDD;
+    }
+  }
+
+  &#stats ul.metrics li:first-child {
+    margin-right: 24px;
+    border-right: 1px solid #979797;
+    padding-right: 18px;
+    height: 36px;
+    vertical-align: top;
+  }
+
+  &#gaps-stats ul.metrics li:nth-child(2) {
+    margin-right: 24px;
+    border-right: 1px solid #979797;
+    padding-right: 18px;
+    height: 36px;
+    vertical-align: top;
+  }
+  &#gaps-stats ul.metrics li:nth-child(3) {
+    text-align: right;
+  }
+
+  div.chart {
+    cursor: crosshair;
+    &.shift {
+      cursor: grab;
+    }
+    &.shift-drag {
+      cursor: grab;
+      cursor: grabbing;
+    }
+    g.start_marker,
+    g.end_marker {
+      cursor: ew-resize;
+    }
+  }
+}
+
+div.buttons {
+  position: absolute;
+  top: 16px;
+  right: 25px;
+  button {
+    margin-left: 1em;
+    &.compare-toggle {
+      background-color: none;
+      border: 2px solid white;
+      &:not(.disabled):hover {
+        background-color: #F6F6F6;
+        color: #4B5A6A;
+      }
+      &:active {
+        box-shadow: inset 0 5px 30px #DADADA;
+      }
+    }
+  }
+}
+
+ul.hot-projects {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 290px;
+  overflow-y: auto;
+  li {
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+ul.contributors, ul.subTags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 290px;
+  overflow-y: auto;
+  position: relative;
+  li {
+    span.percentage {
+      position: absolute;
+      right: 0;
+    }
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+.overlays-dropdown > .rc-dropdown-menu:before {
+  left: 21px;
+  right: auto;
+}
+
+div.ReactModalPortal {
+  a.close-link {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #BEC9D5;
+  }
+
+  .updating:after {
+    border-color: #888888;
+    border-top-color: transparent;
+  }
+}
+
+@keyframes circle {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
