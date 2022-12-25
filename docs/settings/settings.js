@@ -1,4 +1,4 @@
-const mapbox_token = 'pk.eyJ1IjoiaG90IiwiYSI6ImNpbmx4bWN6ajAwYTd3OW0ycjh3bTZvc3QifQ.KtikS4sFO95Jm8nyiOR4gQ'
+const mapbox_token = 'pk.eyJ1IjoibWFwY29uY2llcmdlIiwiYSI6ImJmNENfRG8ifQ.sfstXrLSQ50IqGHpAUlKDw'
 
 export default {
   'vt-source': 'https://tiles.osm-analytics.heigit.org', // source of current vector tiles
